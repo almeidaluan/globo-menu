@@ -1,6 +1,6 @@
 # GloboSelecao
 
-O Desafio: Header e Menu
+Header e Menu
 
 ## Getting Started
 
@@ -27,6 +27,10 @@ Run project.
 
 make run
 
+Run gulp.
+
+node run gulp min-css
+
 ```
 
 
@@ -43,7 +47,6 @@ https://afternoon-lowlands-91017.herokuapp.com/admin
 login:globo
 
 senha:globo123
-
 
 
 
