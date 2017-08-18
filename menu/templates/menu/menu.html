@@ -1,0 +1,53 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title></title>
+  <link rel="stylesheet" href="{% static 'dist/css/style.css' %}">
+</head>
+
+<body>
+  <header>
+    <nav class="nav topo">
+      <figure class="fig-logo">
+        <img src="{% static 'dist/img/g1.png' %}" alt="" />
+      </figure>
+      <ul class="nav menu-hamburguer">
+        <li>
+          <div id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <ul class="sub-menu">
+            {% for item in items%}
+            <li id="pdt-um" class="li-um">
+              {% if item.parent_id is None%}
+              <a href="#">{{item}}</a> {%endif%}
+              <ul class="menu2">
+                {%for iten in item.getChildren%}
+                <li><a href="{{iten.url}}">{{iten.label}}</a></li>
+                {%for novo in iten.get_descendants%}
+                <li ><a id="sub-iten-iten" href="{{novo.url}}">{{novo}}</a></li>
+                </br>
+                {%endfor%} {%endfor%}
+              </ul>
+
+            </li>
+            {%endfor%}
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+
+  </section>
+
+
+</body>
+
+</html>
