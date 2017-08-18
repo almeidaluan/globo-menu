@@ -30,7 +30,7 @@ make run
 ```
 
 
-## Deployment
+## Web
 
 Link from project
 
